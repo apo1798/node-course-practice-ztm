@@ -9,7 +9,8 @@
     "client": "npm run start --prefix=client",
     "watch": "npm run server & npm run client",
     "deploy": "npm run build --prefix=client && npm start --prefix server",
-    "deploy-cluster": "npm run build --prefix=client && npm run cluster --prefix server"
+    "deploy-cluster": "npm run build --prefix=client && npm run cluster --prefix server",
+    "postinstall": "(cd client && npm i); (cd server && npm i)"
   },
   "keywords": [],
   "author": "",
