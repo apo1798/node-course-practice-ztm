@@ -7,7 +7,7 @@
   "scripts": {
     "watch": "nodemon --loader=commonjs-extension-resolution-loader src/server.js ",
     "start": "node --loader=commonjs-extension-resolution-loader src/server.js ",
-    "test": "jest --watchAll",
+    "test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
     "test2": "NODE_OPTIONS=--experimental-vm-modules npx jest --watchAll --detectOpenHandles",
     "cluster": "pm2 start src/server.js  --node-args='--loader=commonjs-extension-resolution-loader'",
     "cluster3": "pm2 start src/server.js -i 1 --node-args='--loader=commonjs-extension-resolution-loader'"

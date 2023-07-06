@@ -7,11 +7,11 @@ describe('Launches API', () => {
     await mongoConnect();
   });
   afterAll(async () => {
-    // try {
-    //   await mongoDisconnect();
-    // } catch (e) {
-    //   console.log(e);
-    // }
+    try {
+      await mongoDisconnect();
+    } catch (e) {
+      console.log(e);
+    }
   });
 
   describe('Test GET /launches', () => {
